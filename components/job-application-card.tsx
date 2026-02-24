@@ -152,8 +152,8 @@ export default function JobApplicationCard({ job, columns, dragHandleProps }: Jo
       <Dialog open={isEditing} onOpenChange={setIsEditing}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle>Add Job Application</DialogTitle>
-            <DialogDescription>Track a new job application</DialogDescription>
+            <DialogTitle>Edit Job Application</DialogTitle>
+            <DialogDescription>Update job application details</DialogDescription>
           </DialogHeader>
           <form className="space-y-4" onSubmit={handleUpdate}>
             <div className="space-y-4">

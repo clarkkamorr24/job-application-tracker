@@ -20,7 +20,6 @@ export default function Home() {
                   Start for free <ArrowRight className="ml-2" />
                 </Button>
               </Link>
-              <p>Free forever</p>
             </div>
           </div>
         </section>

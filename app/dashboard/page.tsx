@@ -4,6 +4,7 @@ import { Board } from "@/lib/models";
 import { redirect } from "next/navigation";
 import KanbanBoard from "@/components/kanban-board";
 import { Suspense } from "react";
+import { BoardSkeleton } from "@/components/board-skeleton";
 
 async function getBoard(userId: string) {
   "use cache";
@@ -50,7 +51,13 @@ async function DashboardPage() {
 
 export default async function Dashboard() {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense
+      fallback={
+        <div className="container mx-auto p-6">
+          <BoardSkeleton />
+        </div>
+      }
+    >
       <DashboardPage />
     </Suspense>
   );
